@@ -1,59 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Live Chat Integration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Chat Widget Integration</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: auto;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-    </style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Welcome to Our Site</h1>
-        <p>Start typing below. Keyboard should auto-open on mobile (if allowed).</p>
-        
-        <!-- Input to auto-focus -->
-        <input type="text" id="mobileInput" placeholder="Type here..." autofocus>
-    </div>
-
-    <!-- Live chat script -->
-    <script>
-window.fcWidgetMessengerConfig = {
-  config: {
-    fullscreen: true,
-  }  
-}  
-</script>
-    <script src="//fw-cdn.com/12637359/5018425.js" chat="true"></script>
-
-    <!-- Focus input programmatically (extra safeguard) -->
-    <script>
-        window.addEventListener('load', function() {
-            const input = document.getElementById('mobileInput');
-            input.focus();
-        });
-    </script>
+  <!-- Freshchat Widget Script -->
+  <script>
+    window.fcWidgetMessengerConfig = {
+      config: {
+        fullscreen: true,
+      }  
+    }  
+  </script>
+  <script src="//fw-cdn.com/12637359/5018425.js" chat="true"></script>
 
 </body>
 </html>
-
